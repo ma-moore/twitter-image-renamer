@@ -1,5 +1,7 @@
+TARGET_FOLDER ?= .
+
 check-large:
-	@find . -name "*-large"
+	@find $(TARGET_FOLDER) -name "*-large"
 
 remove-large:
-	@find . -name "*-large" -exec rename 's/-large//' {} \;
+	@find $(TARGET_FOLDER) -name "*-large" -exec rename 's/-large//' {} \;
